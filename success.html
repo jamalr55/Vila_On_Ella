@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vista on Ella Apartments</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		<link href="css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,900|Raleway:500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="property-logo">
+							<a href="index.html" target="_blank"><h1>Vista on Ella</h1></a>
+            </div>
+            <div class="navigation-wrapper">
+                
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="#floorplans" class="scroll-page">Floor Plans</a></li>
+												<li><a href="#amenities" class="scroll-page">Amenities</a></li>
+												<li><a href="#gallery" class="scroll-page">Gallery</a></li>
+                        <li><a href="#location" class="scroll-page">Location</a></li>
+                        <li><a href="#contact" class="scroll-page">Contacts</a></li>
+                    </ul>
+                </nav>                
+            </div>
+            
+        </div>
+    </header>
+    
+    <div class="hero">
+        <div class="content-wrapper">
+            <div class="hero-text">
+                <div class="hero-text--01 fit">Spacious One &amp; Two Bedroom</div>
+                <div class="hero-text--02 fit">Apartments Await you at</div>
+                <div class="hero-text--03 fit">Vista on Ella in</div>
+                <div class="hero-text--04 fit">North Houston, TX.</div>
+            </div>
+        </div>
+    </div>
+    <div class="intro-block section">
+			<h1>Thank you for your interest in Vista on Ella!</h1>
+			<p>One of our staff will be getting in contact with you soon.</p>
+		</div>
+		
+		<!-- FOOTER -->
+    <footer>
+        <div class="content-wrapper">
+            <div class="links">
+                <a href="index.html" target="_blank"><h3>Vista on Ella</h3></a>
+                <a href="#" target="_blank"><img src="img/eho-logo.png" alt="Equal Housing Opportunity"></a>
+            </div>
+            <a href="#">Privacy Policy</a>
+            <div class="copyright">
+							<p>Copyright &copy; <span id="year"></span>. Vista on Ella Apartments</p>
+						</div>
+        </div>
+    </footer>
+</body>
+<script src="js/fitty.min.js"></script>
+<script>
+    fitty('.hero-text--01');
+    fitty('.hero-text--02');
+    fitty('.hero-text--03');
+    fitty('.hero-text--04');
+</script>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+<script type="text/javascript">
+
+// Smooth Scroll - https://github.com/cferdinandi/smooth-scroll
+ const scroll = new SmoothScroll('.primary-nav a[href*="#"]', {
+	speed: 800,
+	offset: 100
+});
+
+// GALLERY
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var images = document.getElementsByClassName("myImg");
+var modalImg = document.getElementById("img01");
+var i;
+for (i = 0; i < images.length; i++) {
+	images[i].onclick = function() {
+		modal.style.display = "block";
+		modalImg.src = this.src;
+		modalImg.alt = this.alt;
+	};
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+	modal.style.display = "none";
+};
+
+// Get the current year for the copyright
+$('#year').text(new Date().getFullYear());
+</script>
+</html>
