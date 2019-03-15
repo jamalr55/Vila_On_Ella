@@ -613,6 +613,61 @@ header .primary-nav ul > * + * {
     }
   }
 }
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog img {
+	width: 40%;
+	display: block;
+  margin-left: auto;
+	margin-right: auto;
+	margin-top: 25px;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: 10px;
+	text-align: center;
+	top: 10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	font-size: 35px;
+}
+
+/* .close:hover { background: none; } */
+
+
 /* AMEITIES */
 .amenities-block {
   padding: 0;
@@ -767,7 +822,7 @@ header .primary-nav ul > * + * {
 }
 
 /* The Close Button */
-.close {
+.close2 {
   position: absolute;
   top: 15px;
   right: 35px;
@@ -777,8 +832,8 @@ header .primary-nav ul > * + * {
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close2:hover,
+.close2:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
