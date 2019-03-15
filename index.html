@@ -10,7 +10,7 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-		<link href="css/lightbox.min.css" rel="stylesheet">
+		
     <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700,900|Raleway:500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -60,7 +60,7 @@
             <h2 class="section--title">Floorplans</h2>
             <p>Browse our selection of one and two bedroom apartments in the Vista on Ella neighborhood of Houston, TX. After you’ve found your favorite, contact us to schedule your personal tour and receive more information about current availability. We have a variety of floorplans ranging from one bedrooms and spacious two bedrooms to meet all your residential needs.</p>
             <div class="floorplans">
-                <a href="img/floorplansA1.jpg" class="floorplan" data-lightbox="floorplans">
+                <a href="#openModal1" class="floorplan">
                     <div class="floorplan-header">
                         <div class="floorplan-header_name">A1</div>
                         <div class="floorplan-header_sqft">501 Sq Ft.</div>
@@ -84,9 +84,13 @@
                         <div class="floorplan-footer_availability">Call for Availability</div>
                     </div>
 								</a>
+								<div id="openModal1" class="modalDialog">
+									<a href="#close" title="Close" class="close">X</a>
+									<img src="img/floorplansA1.jpg" />
+								</div>
 								
 								
-                <a href="img/floorplansA2.jpg" class="floorplan" data-lightbox="floorplans">
+                <a href="#openModal2" class="floorplan">
                     <div class="floorplan-header">
                         <div class="floorplan-header_name">A2</div>
                         <div class="floorplan-header_sqft">656 Sq Ft.</div>
@@ -110,9 +114,13 @@
                         <div class="floorplan-footer_availability">Call for Availability</div>
                     </div>
 								</a>
+								<div id="openModal2" class="modalDialog">
+									<a href="#close" title="Close" class="close">X</a>
+									<img src="img/floorplansA2.jpg" />
+								</div>
 								
 
-                <a href="img/floorplansB1.jpg" class="floorplan" data-lightbox="floorplans">
+                <a href="#openModal3" class="floorplan">
                     <div class="floorplan-header">
                         <div class="floorplan-header_name">B1</div>
                         <div class="floorplan-header_sqft">859 Sq Ft.</div>
@@ -136,9 +144,13 @@
                         <div class="floorplan-footer_availability">Call for Availability</div>
                     </div>
 								</a>
+								<div id="openModal3" class="modalDialog">
+									<a href="#close" title="Close" class="close">X</a>
+									<img src="img/floorplansB1.jpg" />
+								</div>
 								
 								
-								<a href="img/floorplansB2.jpg" class="floorplan" data-lightbox="floorplans">
+								<a href="#openModal4" class="floorplan">
                     <div class="floorplan-header">
                         <div class="floorplan-header_name">B2</div>
                         <div class="floorplan-header_sqft">920 Sq Ft.</div>
@@ -162,6 +174,10 @@
                         <div class="floorplan-footer_availability">Call for Availability</div>
 										</div>
 								</a>
+								<div id="openModal4" class="modalDialog">
+									<a href="#close" title="Close" class="close">X</a>
+									<img src="img/floorplansB2.jpg" />
+								</div>
 								
 
             </div>
@@ -250,7 +266,7 @@
 		<!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- The Close Button -->
-      <span class="close">&times;</span>
+      <span class="close2">&times;</span>
 
       <!-- Modal Content (The Image) -->
       <img class="modal-content" id="img01" />
@@ -350,7 +366,7 @@
 </script>
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="js/lightbox.min.js"></script>
+
 <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 
 <script type="text/javascript">
@@ -378,7 +394,7 @@ for (i = 0; i < images.length; i++) {
 }
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close2")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
